@@ -1,113 +1,87 @@
 .device-simulation.device-simulation {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	margin-left: -30px;
-	width: calc(100% + 60px);
-}
-
-
-.device-simulation__content {
-	order: 1;
-	z-index: 0;
-	margin-top: -100vh;
-	padding-top: calc(50vh - (100vw * 80 / 375));
-	padding-bottom: calc(50vh - (100vw * 75 / 375));
-	width: calc(100% * 230 / 375);
-}
-
-.device-simulation__content img {
-	width: 100%;
-}
-
-.device-simulation__overlay {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 100vh;
-	position: sticky;
-	top: 0;
-	bottom: 0;
-	order: 0;
-	z-index: 1;
-	max-width: 1580px;
-}
-
-.device-simulation__overlay::before {
-	content: '';
-	display: block;
-	flex: 1;
-	width: 100%;
-}
-
-.device-simulation__overlay::after {
-	content: '';
-	display: block;
-	flex: 1;
-	width: 100%;
-}
-
-.device-simulation__device {
-	flex-shrink: 0;
-}
-
-
-
-/* Small Desktop */
-@media screen and (min-width: 1025px) {
-	.device-simulation.device-simulation {
-		margin-left: -60px;
-		width: calc(100% + 120px);
-	}
-}
-
-/* Large Desktop */
-@media screen and (min-width: 1467px) {
-	.device-simulation.device-simulation {
-		margin-left: -80px;
-		width: calc(100% + 160px);
-	}
-}
-
-/* Extra Large Desktop */
-/* Width maxes out at 1420px due to containers */
-@media screen and (min-width: 1660px) {
-	.device-simulation.device-simulation {
-		margin-left: calc(50% - 50vw);
-		width: 100vw;
-		max-width: none !important;
-	}
-
-	.device-simulation__content {
-		width: 870px;
-		padding-top: calc(50vh - 305px);
-		padding-bottom: calc(50vh - 235px);
-	}
-
-	.device-simulation__overlay {
-		max-width: 1420px;
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* Themes */
-.device-simulation--green {
-	background-color: #16A139;
-}
-
-.device-simulation--green .device-simulation__overlay::before,
-.device-simulation--green .device-simulation__overlay::after {
-	background-color: #16A139;
-}
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: -30px;
+  width: calc(100% + 60px);
+  /* Tablet */
+  /* Small Desktop */
+  /* Large Desktop */
+  /* Extra Large Desktop */
+  /* Width maxes out at 1420px due to containers */
+  /* Device types */
+  /* Themes */ }
+  .device-simulation.device-simulation .device-simulation__content {
+    order: 1;
+    z-index: 0;
+    margin-top: -100vh; }
+    .device-simulation.device-simulation .device-simulation__content img {
+      width: 100%; }
+  .device-simulation.device-simulation .device-simulation__overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    order: 0;
+    z-index: 1; }
+    .device-simulation.device-simulation .device-simulation__overlay::before, .device-simulation.device-simulation .device-simulation__overlay::after {
+      content: '';
+      display: block;
+      flex: 1;
+      width: 100%; }
+  .device-simulation.device-simulation .device-simulation__device {
+    flex-shrink: 0;
+    max-height: 100%; }
+  @media screen and (min-width: 768px) {
+    .device-simulation.device-simulation {
+      margin-left: -40px;
+      width: calc(100% + 80px); } }
+  @media screen and (min-width: 1025px) {
+    .device-simulation.device-simulation {
+      margin-left: -60px;
+      width: calc(100% + 120px); } }
+  @media screen and (min-width: 1467px) {
+    .device-simulation.device-simulation {
+      margin-left: -80px;
+      width: calc(100% + 160px); } }
+  @media screen and (min-width: 1660px) {
+    .device-simulation.device-simulation {
+      margin-left: calc(50% - 50vw);
+      width: 100vw;
+      max-width: none !important; } }
+  .device-simulation.device-simulation--laptop .device-simulation__content {
+    padding-top: calc(50vh - (100vw * 80 / 375));
+    padding-bottom: calc(50vh - (100vw * 75 / 375));
+    width: calc(100% * 235 / 375);
+    /* Extra Large Desktop */
+    /* Width maxes out at 1420px due to containers */ }
+    @media screen and (min-width: 1660px) {
+      .device-simulation.device-simulation--laptop .device-simulation__content {
+        width: 870px;
+        padding-top: calc(50vh - 305px);
+        padding-bottom: calc(50vh - 235px); } }
+  @media screen and (min-width: 1660px) {
+    .device-simulation.device-simulation--laptop .device-simulation__overlay {
+      max-width: 1420px; } }
+  .device-simulation.device-simulation--mobile .device-simulation__content {
+    padding: calc(50vh - (100vw * 140 / 375)) 0;
+    width: calc(100% * 130 / 375);
+    /* Landscape (when phone image maxes on height) */ }
+    @media (min-aspect-ratio: 500 / 613) {
+      .device-simulation.device-simulation--mobile .device-simulation__content {
+        width: calc(100vh * 270 / 975);
+        padding-top: calc(100vh * 195 / 975);
+        padding-bottom: calc(100vh * 190 / 975); } }
+  @media screen and (min-width: 1660px) {
+    .device-simulation.device-simulation--mobile .device-simulation__overlay {
+      max-width: 1420px; } }
+  .device-simulation.device-simulation--green {
+    background-color: #16A139; }
+    .device-simulation.device-simulation--green .device-simulation__overlay::before,
+    .device-simulation.device-simulation--green .device-simulation__overlay::after {
+      background-color: #16A139; }
