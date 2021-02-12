@@ -1,5 +1,5 @@
 html {
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 #app {
@@ -7,8 +7,8 @@ html {
 		left: 0;
 		position: fixed;
 		width: 100vw;
-		height: 100vh;
-		overflow: hidden;
+		/*height: 100vh;*/
+		/*overflow: hidden;*/
 		pointer-events: none;
 		opacity:0;
 		-webkit-transition: all 0.1s ease-in-out 0.3s;

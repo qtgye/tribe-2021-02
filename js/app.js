@@ -24,6 +24,6 @@ VimeoVideo();
 
 window.app = Object.assign(window.app || {}, {
 	initSnapScroll() {
-		SnapScroll.init();
+		// SnapScroll.init();
 	}
 })

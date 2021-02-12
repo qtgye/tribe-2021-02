@@ -13,6 +13,7 @@ Primary use:	Showcase Portfolio
 @import url("css/assets.css");
 
 @import url("css/detail.css");
+@import url("css/device-simulation.css");
 
 
 /*------------------------------------------------------------------
@@ -54,8 +55,8 @@ Primary use:	Showcase Portfolio
 	}
 
 	body {
-		overflow: hidden;
-		overflow-y:scroll;
+		/*overflow: hidden;*/
+		/*overflow-y:scroll;*/
 		-webkit-transition: opacity 0.2s ease-in-out 0.2s;
 		transition: opacity 0.2s ease-in-out 0.2s;
 	}
@@ -2124,7 +2125,7 @@ Primary use:	Showcase Portfolio
 		-khtml-user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;
-		overflow:hidden;
+		/*overflow:hidden;*/
 	}
 
 	.load-project-page #main, .load-project-page-carousel #main, .load-next-project #main, .load-next-page #main {
