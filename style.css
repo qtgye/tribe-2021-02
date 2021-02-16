@@ -12,8 +12,11 @@ Primary use:	Showcase Portfolio
 @import url("css/shortcodes.css");
 @import url("css/assets.css");
 
+@import url("css/global-overrides.css");
 @import url("css/detail.css");
 @import url("css/device-simulation.css");
+@import url("css/swiper-overrides.css");
+@import url("css/project-nav-overrides.css");
 
 
 /*------------------------------------------------------------------

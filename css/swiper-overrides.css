@@ -1,0 +1,7 @@
+#main-content .swiper-container.content-looped-carousel {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden !important; }
+  #main-content .swiper-container.content-looped-carousel .swiper-wrapper {
+    width: calc(100% * 318 / 375);
+    max-width: 1420px; }
