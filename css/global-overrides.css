@@ -1,7 +1,0 @@
-.vc_row.large {
-  width: 100vw;
-  padding: 0 calc((100vw - 100%) / 2);
-  margin-left: calc(50% - 50vw); }
-  .vc_row.large .half-dark-section-wrapper,
-  .vc_row.large .half-white-section-wrapper {
-    left: 0; }
