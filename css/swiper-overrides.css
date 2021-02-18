@@ -1,0 +1,5 @@
+#main-content .swiper-parent {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden !important;
+  padding: 0 30px; }

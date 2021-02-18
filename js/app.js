@@ -1,6 +1,7 @@
 import Vendors from './vendors.js';
 import VimeoVideo from './vimeo-video.js';
 import SnapScroll from './snap-scroll.js';
+import SwiperOverrides from './swiper-overrides.js';
 
 Vendors({
 	// Callback must return TRUE to stop check
@@ -21,6 +22,7 @@ Vendors({
 });
 
 VimeoVideo();
+SwiperOverrides.init();
 
 window.app = Object.assign(window.app || {}, {
 	initSnapScroll() {

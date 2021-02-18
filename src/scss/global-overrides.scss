@@ -1,10 +1,20 @@
 .vc_row.large {
-	// width: 100vw;
-	// padding: 0 calc((100vw - 100%) / 2);
-	// margin-left: calc(50% - 50vw);
+	width: 100vw;
+	padding: 0 calc((100vw - 100%) / 2);
+	margin-left: calc(50% - 50vw);
+	overflow: hidden;
 
-	// .half-dark-section-wrapper,
-	// .half-white-section-wrapper {
-	// 	left: 0;
-	// }
+	.half-dark-section-wrapper,
+	.half-white-section-wrapper {
+		left: 0;
+	}
 }
+
+.vc_row.full {
+	overflow: hidden;
+}
+
+// .white-section-wrapper.large {
+// 	overflow: hidden;
+// }
+
