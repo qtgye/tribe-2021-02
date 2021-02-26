@@ -1,0 +1,137 @@
+.device-simulation.device-simulation {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-left: -30px;
+	width: calc(100% + 60px);
+	overflow: unset !important;
+
+	.device-simulation {
+		&__content {
+			order: 1;
+			z-index: 0;
+			margin-top: -100vh;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		&__overlay {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: 100vh;
+			position: sticky;
+			top: 0;
+			bottom: 0;
+			order: 0;
+			z-index: 1;
+
+
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				flex: 1;
+				width: 100%;
+			}
+		}
+
+		&__device {
+			flex-shrink: 0;
+			max-height: 100%;
+		}
+	}
+
+	/* Tablet */
+	@media screen and (min-width: 768px) {
+		margin-left: -40px;
+		width: calc(100% + 80px);
+	}
+
+	/* Small Desktop */
+	@media screen and (min-width: 1025px) {
+		margin-left: -60px;
+		width: calc(100% + 120px);
+	}
+
+	/* Large Desktop */
+	@media screen and (min-width: 1467px) {
+		margin-left: -80px;
+		width: calc(100% + 160px);
+	}
+
+	/* Extra Large Desktop */
+	/* Width maxes out at 1420px due to containers */
+	@media screen and (min-width: 1660px) {
+		margin-left: calc(50% - 50vw);
+		width: 100vw;
+		max-width: none !important;
+	}
+
+
+	/* Device types */
+
+	&--laptop {
+		.device-simulation {
+			&__content {
+				padding-top: calc(50vh - (100vw * 75 / 375));
+				padding-bottom: calc(50vh - (100vw * 75 / 375));
+				width: calc(100% * 235 / 375);
+
+				/* Extra Large Desktop */
+				/* Width maxes out at 1420px due to containers */
+				@media screen and (min-width: 1660px) {
+					width: 870px;
+					padding-top: calc(50vh - 305px);
+					padding-bottom: calc(50vh - 235px);
+				}
+			}
+
+			&__overlay {
+				@media screen and (min-width: 1660px) {
+					max-width: 1420px;
+				}
+			}
+		}
+	}
+
+	&--mobile {
+		.device-simulation {
+			&__content {
+				padding: calc(50vh - (100vw * 140 / 375)) 0;
+				width: calc(100% * 130 / 375);
+
+				/* Landscape (when phone image maxes on height) */
+				@media (min-aspect-ratio: 500/613) {
+					width: calc(100vh * 270 / 975); // 270
+					padding-top: calc(100vh * 195 / 975 );
+					padding-bottom: calc(100vh * 190 / 975 );
+				}
+			}
+
+			&__overlay {
+				@media screen and (min-width: 1660px) {
+					max-width: 1420px;
+				}
+			}
+		}
+	}
+
+
+
+	/* Themes */
+	&--green {
+		background-color: #16A139;
+
+		& .device-simulation__overlay::before,
+		& .device-simulation__overlay::after
+		{
+			background-color: #16A139;
+		}
+	}
+
+}
