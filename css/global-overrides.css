@@ -8,5 +8,8 @@ main {
 #hero {
   margin-left: calc(50% - 50vw); }
 
+#main-page-content {
+  z-index: 4; }
+
 .vc_row.full {
   overflow: hidden; }

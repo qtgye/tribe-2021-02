@@ -13,6 +13,10 @@ main {
 	margin-left: calc(50% - 50vw);
 }
 
+#main-page-content {
+	z-index: 4;
+}
+
 // .vc_row.large {
 // 	width: 100vw;
 // 	padding: 0 calc((100vw - 100%) / 2);
