@@ -1,4 +1,5 @@
 .device-simulation.device-simulation {
+	--theme: #fff;
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -7,6 +8,7 @@
 	margin-left: -30px;
 	width: calc(100% + 60px);
 	overflow: unset !important;
+	background-color: var(--theme);
 
 	.device-simulation {
 		&__content {
@@ -37,6 +39,7 @@
 				display: block;
 				flex: 1;
 				width: 100%;
+				background-color: var(--theme);
 			}
 		}
 
@@ -82,12 +85,34 @@
 				padding-bottom: calc(50vh - (100vw * 75 / 375));
 				width: calc(100% * 235 / 375);
 
-				/* Extra Large Desktop */
-				/* Width maxes out at 1420px due to containers */
+				/* Landscape (when image maxes on height) */
+				@media (min-aspect-ratio: 3184/1992) {
+					width: calc(100vh * 590 / 600); // 270
+					padding-top: calc(100vh * 92 / 600 );
+					padding-bottom: calc(100vh * 140 / 600 );
+					margin-left: calc(100vh * -10 / 600)
+				}
+			}
+
+			&__overlay {
 				@media screen and (min-width: 1660px) {
-					width: 870px;
-					padding-top: calc(50vh - 305px);
-					padding-bottom: calc(50vh - 235px);
+					max-width: 1420px;
+				}
+			}
+		}
+	}
+
+	&--ipad {
+		.device-simulation {
+			&__content {
+				padding: calc(50vh - (100vw * 81 / 375)) 0 calc(50vh - (100vw * 80 / 375));
+				width: calc(100% * 238 / 375);
+
+				/* Landscape (when phone image maxes on height) */
+				@media (min-aspect-ratio: 2170/1358) {
+					width: calc(100vh * 575 / 600); // 270
+					padding-top: calc(100vh * 100 / 600 );
+					padding-bottom: calc(100vh * 100 / 600 );
 				}
 			}
 
@@ -125,13 +150,7 @@
 
 	/* Themes */
 	&--green {
-		background-color: #16A139;
-
-		& .device-simulation__overlay::before,
-		& .device-simulation__overlay::after
-		{
-			background-color: #16A139;
-		}
+		--theme: #16A139;
 	}
 
 }
