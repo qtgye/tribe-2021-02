@@ -81,8 +81,8 @@
 	&--laptop {
 		.device-simulation {
 			&__content {
-				padding-top: calc(50vh - (100vw * 75 / 375));
-				padding-bottom: calc(50vh - (100vw * 75 / 375));
+				padding-top: calc(50vh - (100vw * 84 / 375));
+				padding-bottom: calc(50vh - (100vw * 65 / 375));
 				width: calc(100% * 235 / 375);
 
 				/* Landscape (when image maxes on height) */
@@ -95,8 +95,17 @@
 			}
 
 			&__overlay {
-				@media screen and (min-width: 1660px) {
-					max-width: 1420px;
+				width: 100%;
+			}
+
+			&__device {
+				width: 100%;
+				height: auto;
+
+				/* Landscape (when phone image maxes on height) */
+				@media (min-aspect-ratio: 3184/1992) {
+					width: auto;
+					height: 100%;
 				}
 			}
 		}
@@ -109,7 +118,7 @@
 				width: calc(100% * 238 / 375);
 
 				/* Landscape (when phone image maxes on height) */
-				@media (min-aspect-ratio: 2170/1358) {
+				@media (min-aspect-ratio: 1278/800) {
 					width: calc(100vh * 575 / 600); // 270
 					padding-top: calc(100vh * 100 / 600 );
 					padding-bottom: calc(100vh * 100 / 600 );
@@ -117,8 +126,17 @@
 			}
 
 			&__overlay {
-				@media screen and (min-width: 1660px) {
-					max-width: 1420px;
+				width: 100%;
+			}
+
+			&__device {
+				width: 100%;
+				height: auto;
+
+				/* Landscape (when phone image maxes on height) */
+				@media (min-aspect-ratio: 1278/800) {
+					width: auto;
+					height: 100%;
 				}
 			}
 		}
@@ -127,7 +145,7 @@
 	&--mobile {
 		.device-simulation {
 			&__content {
-				padding: calc(50vh - (100vw * 140 / 375)) 0;
+				padding: calc(50vh - (100vw * 145 / 375)) 0;
 				width: calc(100% * 130 / 375);
 
 				/* Landscape (when phone image maxes on height) */
